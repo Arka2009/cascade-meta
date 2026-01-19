@@ -20,27 +20,20 @@ if "CASCADE_ENV_SOURCED" not in os.environ:
     print("  source env-custom.sh")
     sys.exit(1)
 
-# IMPORTANT: Apply minimal design patch BEFORE importing cascade modules
-from minimal_design_patch import patch_for_demo_design
-patch_for_demo_design()
-
-# Minimal design configuration (no RTL files needed)
-MINIMAL_DESIGN = {
-    'name': 'demo',
-    'boot_addr': 0x80000000,  # Standard RISC-V boot address
-    'is_32bit': False,        # RV64
-}
+# Design name - uses minimal config in design-processing/testing-005/
+DESIGN_NAME = 'testing-005'
 
 def create_minimal_fuzzerstate(randseed=42, memsize=1024*64, nmax_bbs=10):
-    """Create a FuzzerState without needing design config files"""
+    """Create a FuzzerState with minimal 'testing-005' config"""
     from cascade.fuzzerstate import FuzzerState
+    from common.designcfgs import get_design_boot_addr
 
     random.seed(randseed)
 
-    # Create fuzzer state with minimal config
+    # Create fuzzer state with testing-005 config
     fuzzerstate = FuzzerState(
-        design_base_addr=MINIMAL_DESIGN['boot_addr'],
-        design_name=MINIMAL_DESIGN['name'],
+        design_base_addr=get_design_boot_addr(DESIGN_NAME),
+        design_name=DESIGN_NAME,
         memsize=memsize,
         randseed=randseed,
         nmax_bbs=nmax_bbs,
