@@ -27,6 +27,9 @@ export PATH=$HOME/.local/bin:$PATH
 # Uncomment the line below if you want to store Cascade's own tools separately
 # export PREFIX_CASCADE=$HOME/prefix-cascade
 
+# Add makeelf to Python path
+export PYTHONPATH=$SCRIPT_DIR/tools/makeelf:$PYTHONPATH
+
 # Set data directories (customize as needed for your air-gapped machine)
 export CASCADE_DATADIR=$HOME/cascade-data
 export CASCADE_PATH_TO_FIGURES=$HOME/cascade-figures
