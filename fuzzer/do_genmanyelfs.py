@@ -14,7 +14,7 @@ if __name__ == '__main__':
     if "CASCADE_ENV_SOURCED" not in os.environ:
         raise Exception("The Cascade environment must be sourced prior to running the Python recipes.")
 
-    num_elfs = 500
+    num_elfs = 4
     target_dir = os.path.join(PATH_TO_TMP, 'manyelfs')
     if len(sys.argv) > 1:
         num_elfs = int(sys.argv[1])
