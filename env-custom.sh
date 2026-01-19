@@ -16,8 +16,8 @@ export RISCV=$HOME/.local
 export CASCADE_RISCV_BITWIDTH=64
 
 # Update compiler variables to use rv64 (these aren't used by Python scripts but good to set)
-export CASCADE_GCC=riscv64-unknown-elf-gcc
-export CASCADE_OBJDUMP=riscv64-unknown-elf-objdump
+export CASCADE_GCC=$RISCV/bin/riscv64-unknown-elf-gcc
+export CASCADE_OBJDUMP=$RISCV/bin/riscv64-unknown-elf-objdump
 
 # Prioritize your existing tools in PATH
 # This ensures spike and riscv64-unknown-elf-* tools from $HOME/.local/bin are found first
@@ -31,8 +31,8 @@ export PATH=$HOME/.local/bin:$PATH
 export PYTHONPATH=$SCRIPT_DIR/tools/makeelf:$PYTHONPATH
 
 # Set data directories (customize as needed for your air-gapped machine)
-export CASCADE_DATADIR=$HOME/cascade-data
-export CASCADE_PATH_TO_FIGURES=$HOME/cascade-figures
+export CASCADE_DATADIR=$PWD/cascade-data
+export CASCADE_PATH_TO_FIGURES=$PWD/cascade-figures
 
 # Create directories if they don't exist
 mkdir -p "$CASCADE_DATADIR"
