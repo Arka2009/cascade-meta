@@ -5,14 +5,7 @@
   "regdumpaddr": "0x90001010",
   "fpregdumpaddr": "0x90001210",
   "marchflags": "-march=rv64imafd -mabi=lp64d",
-  "is32bit": 0,
-  "hascompressedsupport": 0,
-  "hasfloatsupport": 1,
-  "hasdoublesupport": 1,
-  "hasmuldivsupport": 1,
-  "hasatopsupport": 1,
-  "hasmisaligneddatasupport": 1,
-  "hassupervisormode": 0,
-  "hasusermode": 0,
-  "haspmp": 0
+  "misaligned_data_supported": true,
+  "privlvs": "m",
+  "mmu": "bare"
 }
