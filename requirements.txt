@@ -1,0 +1,8 @@
+tqdm
+matplotlib
+numpy
+kiwisolver
+pillow
+cycler
+contourpy
+fonttools

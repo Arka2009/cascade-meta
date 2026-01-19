@@ -5,3 +5,4 @@ transcript
 tmp
 figures
 test-output/*.elf
+rv64dbenv/

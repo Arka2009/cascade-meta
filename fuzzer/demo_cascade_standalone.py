@@ -43,10 +43,10 @@ def create_minimal_fuzzerstate(randseed=42, memsize=1024*64, nmax_bbs=10):
         design_name=MINIMAL_DESIGN['name'],
         memsize=memsize,
         randseed=randseed,
-        max_num_bbs=nmax_bbs,
+        nmax_bbs=nmax_bbs,
         authorize_privileges=False,  # Disable privilege mode for simplicity
-        max_num_instructions=None,
-        no_dependency_bias=False     # Enable dependency bias (key to Cascade!)
+        nmax_instructions=None,
+        nodependencybias=False     # Enable dependency bias (key to Cascade!)
     )
 
     return fuzzerstate
