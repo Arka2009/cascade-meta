@@ -1,0 +1,10 @@
+#!/bin/bash
+# Mock objcopy for testing - just copies the file as-is
+# In reality, objcopy would convert from elf32 to elf64 format
+
+# This is just for demonstration purposes
+echo "Mock objcopy called with: $@" >&2
+
+# For the test, we'll just leave the file as-is
+# (makeelf already generates valid ELF files)
+exit 0
