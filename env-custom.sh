@@ -40,8 +40,6 @@ export CASCADE_ENV_SOURCED=yes
 # How many parallel jobs would you like to have issued?
 export CASCADE_JOBS=16 # Feel free to change this
 
-export PYTHONPATH=$HOME/.local/lib/python3.8/site-packages:$PYTHONPATH
-
 # Create directories if they don't exist
 mkdir -p "$CASCADE_DATADIR"
 mkdir -p "$CASCADE_PATH_TO_FIGURES"
