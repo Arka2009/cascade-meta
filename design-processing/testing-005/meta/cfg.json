@@ -1,9 +1,9 @@
 {
   "toplevelmodule": "testing_005_wrapper",
   "bootaddr": "0x80000000",
-  "stopsigaddr": "0x90001000",
-  "regdumpaddr": "0x90001010",
-  "fpregdumpaddr": "0x90001210",
+  "stopsigaddr": "0x10001000",
+  "regdumpaddr": "0x10001010",
+  "fpregdumpaddr": "0x10001210",
   "marchflags": "-march=rv64imafd -mabi=lp64d",
   "misaligned_data_supported": true,
   "privlvs": "m",
