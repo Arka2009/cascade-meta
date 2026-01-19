@@ -1,9 +1,9 @@
 {
   "toplevelmodule": "testing_005_wrapper",
-  "bootaddr": 2147483648,
-  "stopsigaddr": 2415919104,
-  "regdumpaddr": 2415919120,
-  "fpregdumpaddr": 2415919632,
+  "bootaddr": "0x80000000",
+  "stopsigaddr": "0x90001000",
+  "regdumpaddr": "0x90001010",
+  "fpregdumpaddr": "0x90001210",
   "is32bit": 0,
   "hascompressedsupport": 0,
   "hasfloatsupport": 1,
