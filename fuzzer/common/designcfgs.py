@@ -4,7 +4,13 @@
 
 import json
 import os
-from functools import cache
+
+# Python 3.8 compatibility: cache was added in Python 3.9
+try:
+    from functools import cache
+except ImportError:
+    from functools import lru_cache
+    cache = lru_cache(maxsize=None)
 
 DESIGN_REPOS_JSON_NAME = "design_repos.json"
 

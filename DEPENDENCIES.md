@@ -2,6 +2,17 @@
 
 This guide lists ALL Python and system dependencies needed to run Cascade fuzzer scripts.
 
+## Python Version Requirement
+
+**Minimum: Python 3.8+** (Python 3.9+ recommended)
+
+The codebase has been made compatible with Python 3.8 by adding a compatibility shim for `functools.cache` (which was introduced in Python 3.9).
+
+Check your Python version:
+```bash
+python3 --version
+```
+
 ## Python Dependencies
 
 ### Standard Library (Built-in - No Installation Needed)

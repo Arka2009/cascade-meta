@@ -9,7 +9,13 @@ import os
 import subprocess
 from pathlib import Path
 from params.runparams import DO_ASSERT, PATH_TO_TMP, NO_REMOVE_TMPFILES
-from functools import cache
+
+# Python 3.8 compatibility: cache was added in Python 3.9
+try:
+    from functools import cache
+except ImportError:
+    from functools import lru_cache
+    cache = lru_cache(maxsize=None)
 
 SPIKE_STARTADDR = 0x80000000
 SPIKE_MEDELEG_MASK = 0xb3ff
